@@ -91,7 +91,7 @@ Saya adalah bot AI (ChatGPT) yang dapat membantu Anda menjawab beberapa pertanya
 
 selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...
 
-_El Bot se limita a responder ${MAX_TOKEN} palabras como máximo_
+_Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal_
 
 Fitur Tambahan :
 - ${prefix}start
@@ -110,7 +110,7 @@ Fitur Khusus Owner:
 - ${prefix}update
 - ${prefix}desactivarwa
 
-*Editado By @Ryan Aditya S.Si*`
+*Dev By @Ryan Aditya S.Si*`
 var templateButtons = [
 {index: 1, urlButton: {displayText: 'DEVELOPER 👑', url: 'https://wa.me/62822522851432'}},
 {index: 2, urlButton: {displayText: 'GITHUB 🌱', url: 'https://github.com/RyannAditya'}},
@@ -127,7 +127,7 @@ var latensi = speed() - timestamp
 reply(`*Tiempo de respuesta: ${latensi.toFixed(4)}s*`)
 break     
 case 'play':
-if (!args[1]) return reply(`*[❗] Nombre de la canción faltante, por favor ingrese el comando mas el nombre, titulo o enlace de alguna canción o video de YouTube*\n\n*—◉ Ejemplo:*\n*◉ ${prefix + command} Good Feeling - Flo Rida*`)        
+if (!args[1]) return reply(`*[❗] Nama lagu tidak ada, harap masukkan perintah plus nama, judul, atau tautan lagu atau video YouTube apa pun*\n\n*—◉ Contoh:*\n*◉ ${prefix + command} Good Feeling - Flo Rida*`)        
 let res = await fetch(`https://api.lolhuman.xyz/api/ytplay2?apikey=BrunoSobrino&query=${textosinespacio}`) 
 let json = await res.json()
 let kingcore = await ytplay(textosinespacio)
@@ -136,12 +136,12 @@ if (!audiodownload) audiodownload = kingcore.result
 sendAud(`${audiodownload}`)
 break
 case 'play2':
-if (!args[1]) return reply(`*[❗] Nombre de la canción faltante, por favor ingrese el comando mas el nombre, titulo o enlace de alguna canción o video de YouTube*\n\n*—◉ Ejemplo:*\n*◉ ${prefix + command} Good Feeling - Flo Rida*`)        
+if (!args[1]) return reply(`*[❗] Harap Masukkan Judul Pemcarian*\n\n*—◉ Contoh:*\n*◉ ${prefix + command} Good Feeling - Flo Rida*`)        
 let mediaa = await ytplayvid(textosinespacio)
 sendVid(mediaa.result, `${mediaa.thumb}`)
 break   
 case 'ytmp3':
-if (!args[1]) return reply(`*[❗] Ingresa el enlace de un video de YouTube*\n\n*—◉ Ejemplo:*\n*◉ ${prefix + command}* https://youtu.be/WEdvakuztPc`)    
+if (!args[1]) return reply(`*[❗] Harap Masukkan Link Youtube Yang Ingin Di Download*\n\n*—◉ Contoh:*\n*◉ ${prefix + command}* https://youtu.be/WEdvakuztPc`)    
 let ress22 = await fetch(`https://api.lolhuman.xyz/api/ytaudio2?apikey=BrunoSobrino&url=${textolink}`) 
 let jsonn22 = await ress22.json()
 let kingcoreee2 = await ytmp3(textolink)
@@ -150,7 +150,7 @@ if (!audiodownloaddd2) audiodownloaddd2 = kingcoreee2.result
 sendAud(`${audiodownloaddd2}`)    
 break        
 case 'ytmp4':
-if (!args[1]) return reply(`*[❗] Ingresa el enlace de un video de YouTube*\n\n*—◉ Ejemplo:*\n*◉ ${prefix + command}* https://youtu.be/WEdvakuztPc`)    
+if (!args[1]) return reply(`*[❗] Harap Masukkan Link Youtube Yang Ingin Di Download*\n\n*—◉ Contoh:*\n*◉ ${prefix + command}* https://youtu.be/WEdvakuztPc`)    
 let ress2 = await fetch(`https://api.lolhuman.xyz/api/ytvideo?apikey=BrunoSobrino&url=${textolink}`) 
 let jsonn2 = await ress2.json()
 let kingcoreee = await ytmp4(textolink)
@@ -159,7 +159,7 @@ if (!videodownloaddd) videodownloaddd = kingcoreee.result
 sendVid(videodownloaddd, `${kingcoreee.thumb}`)    
 break    
 case 'dall-e': case 'draw': 
-if (!args[1]) return reply(`*[❗] Ingrese un texto el cual sera la tematica de la imagen y así usar la función de la IA Dall-E*\n\n*—◉ Ejemplos de peticions:*\n*◉ ${prefix + command} gatitos llorando*\n*◉ ${prefix + command} hatsune miku beso*`)    
+if (!args[1]) return reply(`*[❗] Masukkan teks yang akan menjadi tema gambar dan gunakan fungsi AI Dall-E*\n\n*—◉ Contoh permintaan:*\n*◉ ${prefix + command} anak kucing menangis*\n*◉ ${prefix + command} hatsune miku beso*`)    
 try {       
 const responsee = await openai.createImage({ prompt: textosinespacio, n: 1, size: "512x512", });    
 sendImgUrl(responsee.data.data[0].url)        
@@ -171,13 +171,13 @@ sendImgUrl(`https://api.lolhuman.xyz/api/dall-e?apikey=BrunoSobrino&text=${texto
 reply("*[❗] Error en el servidor 2, no se obtuvo ninguna imagen de la IA...*\n\n*—◉ Error:*\n" + jj2)        
 }}
 break
-case 'chatgpt': case 'ia': 
-if (!args[1]) return reply(`*[❗] Ingrese una petición o una orden para usar la funcion ChatGPT*\n\n*—◉ Ejemplos de peticions u ordenes:*\n*◉ ${prefix + command} Reflexion sobre la serie Merlina 2022 de netflix*\n*◉ ${prefix + command} Codigo en JS para un juego de cartas*`)           
+case 'chatgpt': case 'ai': 
+if (!args[1]) return reply(`*[❗] Masukkan Teks Untuk Menggunakan Fitur ChatGPT*\n\n*—◉ Contoh Penggunaan:*\n*◉ ${prefix + command} Reflexion sobre la serie Merlina 2022 de netflix*\n*◉ ${prefix + command} Codigo en JS para un juego de cartas*`)           
 try {
 const BotIA = await openai.createCompletion({ model: "text-davinci-003", prompt: textosinespacio, temperature: 0.3, max_tokens: MAX_TOKEN, stop: ["Ai:", "Human:"], top_p: 1, frequency_penalty: 0.2, presence_penalty: 0, })
 reply(BotIA.data.choices[0].text.trim())
 } catch (qe) {
-reply("*[❗] Error en el servidor 1, se intentará con otro servidor...*\n\n*—◉ Error:*\n" + qe)       
+reply("*[❗] Terjadi Error Dalam Server Last Code 1, Sedang Mencari Server Terbaik...*\n\n*—◉ Error:*\n" + qe)       
 try {    
 let tioress = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino&text=${textosinespacio}&user=user-unique-id`)
 let hasill = await tioress.json()
@@ -234,10 +234,10 @@ break
 case 'mediafiredl':
 let resss2 = await mediafireDl(textosinespacio)
 let caption = `
-*📓 Nombre:* ${resss2.name}
-*📁 Peso:* ${resss2.size}
-*📄 Tipo:* ${resss2.mime}\n
-*⏳ Espere en lo que envio su archivo. . . .* 
+*📓 Nama:* ${resss2.name}
+*📁 Size:* ${resss2.size}
+*📄 Jenis:* ${resss2.mime}\n
+*⏳ Harap Menunggu saya sedang mengirim file anda. . . .* 
 `.trim()
 await reply(caption)
 await conn.sendMessage(from, { document : { url: resss2.link }, fileName: resss2.name, mimetype: resss2.mime.toUpperCase() }, { quoted: msg })       
@@ -263,7 +263,7 @@ break*/
     
 case 'sticker': case 's':
 try {        
-const pname = 'OpenAI - WaBot'
+const pname = 'OpenAI Bot - By Ryan X ZeEx\nBot Number\nwa.me/+62823504965327'
 const athor = '+' + conn.user.id.split(":")[0];
 if (isImage || isQuotedImage) {
 await conn.downloadAndSaveMediaMessage(msg, "image", `./tmp/${sender.split("@")[0]}.jpeg`)
