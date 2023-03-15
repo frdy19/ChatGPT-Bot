@@ -87,34 +87,34 @@ switch (command) {
 case 'start': case 'menu':
 var textReply = `Hai,
 
-Saya adalah bot AI (ChatGPT) yang dapat membantu Anda menjawab beberapa pertanyaan.
+*Saya adalah bot AI _(ChatGPT)_ yang dapat membantu Anda menjawab beberapa pertanyaan.*
 
-selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...
+*selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...*
 
 _Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal_
 
-*FITUR TAMBAHAN:*
-- +${prefix}start*       : _untuk memulai chat_
-- +${prefix}ping*        : _kecepatan respon_
-- *${prefix}runtime*     : _waktu berjalan_
-- +${prefix}play*        : _mencari video or audio di yt_
-- *${prefix}play2*       : _mencari video or audio di yt_
-- *${prefix}ytmp3*       : _download audio dari link yt_
-- *${prefix}ytmp4*       : _download video yt ke galeri_
-- *${prefix}chatgpt*     : ChatGpt_
-- *${prefix}dall-e*      : _menciptakan gambar dari sebuah kata_
-- *${prefix}sticker*     : _membuat sticker_
-- *${prefix}mediafiredl* : _download link mediafire_
+*𝙁𝙞𝙩𝙪𝙧 𝙏𝙖𝙢𝙗𝙖𝙝𝙖𝙣:*
+〆 *${prefix}start*       : _untuk memulai chat_
+〆 *${prefix}ping*        : _kecepatan respon_
+〆 *${prefix}runtime*     : _waktu berjalan_
+〆 *${prefix}play*        : _mencari video or audio di yt_
+〆 *${prefix}play2*       : _mencari video or audio di yt_
+〆 *${prefix}ytmp3*       : _download audio dari link yt_
+〆 *${prefix}ytmp4*       : _download video yt ke galeri_
+〆 *${prefix}chatgpt*     : ChatGpt_
+〆 *${prefix}dall-e*      : _menciptakan gambar dari sebuah kata_
+〆 *${prefix}sticker*     : _membuat sticker_
+〆 *${prefix}mediafiredl* : _download link mediafire_
 
-*FITUR KHUSUS OWNER:*
-- *${prefix}update*
-- *${prefix}desactivarwa*
+*𝙁𝙞𝙩𝙪𝙧 𝙆𝙝𝙪𝙨𝙪𝙨 𝙊𝙬𝙣𝙚𝙧:*
+〆 *${prefix}update*
+〆 *${prefix}desactivarwa*
 
-*Dev By @Ryan Aditya S.Si* X *ZeEx*`
+𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 @𝙍𝙮𝙖𝙣 𝘼𝙙𝙞𝙩𝙮𝙖 𝙭 @𝙕𝙚𝙀𝙭 𝙈𝙤𝙙𝙨`
 var templateButtons = [
-{index: 1, urlButton: {displayText: 'Developer 👑', url: 'https://wa.me/62822522851432'}},
-{index: 2, urlButton: {displayText: 'Github 🌱', url: 'https://github.com/RyannAditya'}},
-{index: 3, urlButton: {displayText: 'Grup Official 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
+{index: 1, urlButton: {displayText: '𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 👑', url: 'https://wa.me/62822522851432'}},
+{index: 2, urlButton: {displayText: '𝙎𝙤𝙪𝙘𝙚𝙧 𝘾𝙤𝙙𝙚 🌱', url: 'https://github.com/RyannAditya'}},
+{index: 3, urlButton: {displayText: '𝙂𝙧𝙪𝙥 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
 let templateMessage = { image: {url: 'https://www.mizanurrmizan.info/wp-content/uploads/2023/02/chatgpt.jpg'}, caption: textReply, footer: null, templateButtons: templateButtons, viewOnce: true };
 conn.sendMessage(from, templateMessage, { quoted: msg });
 break
