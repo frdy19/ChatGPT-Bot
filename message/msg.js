@@ -85,13 +85,15 @@ conn.sendPresenceUpdate("available", from);
 
 switch (command) {
 case 'start': case 'menu':
-var textReply = `Hola 👋
+var textReply = `Hai,
 
-Soy un Bot de WhatsApp que usa la inteligencia artificial de OpenAI (ChatGPT), fui creado para responder a tus preguntas. Envíame una pregunta y te responderé!. 
+Saya adalah bot AI (ChatGPT) yang dapat membantu Anda menjawab beberapa pertanyaan.
+
+selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...
 
 _El Bot se limita a responder ${MAX_TOKEN} palabras como máximo_
 
-Comandos disposibles:
+Fitur Tambahan :
 - ${prefix}start
 - ${prefix}ping
 - ${prefix}runtime
@@ -104,14 +106,15 @@ Comandos disposibles:
 - ${prefix}sticker
 - ${prefix}mediafiredl
 
-Comandos del Owner:
+Fitur Khusus Owner:
 - ${prefix}update
 - ${prefix}desactivarwa
 
-*Editado By @BrunoSobrino*`
+*Editado By @Ryan Aditya S.Si*`
 var templateButtons = [
-{index: 1, urlButton: {displayText: '𝙾𝚆𝙽𝙴𝚁 👑', url: 'https://wa.me/5219996125657'}},
-{index: 2, urlButton: {displayText: '𝙶𝙸𝚃𝙷𝚄𝙱 🔗', url: 'https://github.com/BrunoSobrino/openai-botwa'}}]
+{index: 1, urlButton: {displayText: 'DEVELOPER 👑', url: 'https://wa.me/62822522851432'}},
+{index: 2, urlButton: {displayText: 'GITHUB 🌱', url: 'https://github.com/RyannAditya'}},
+{index: 3, urlButton: {displayText: 'GRUP OFC 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
 let templateMessage = { image: {url: 'https://www.mizanurrmizan.info/wp-content/uploads/2023/02/chatgpt.jpg'}, caption: textReply, footer: null, templateButtons: templateButtons, viewOnce: true };
 conn.sendMessage(from, templateMessage, { quoted: msg });
 break
