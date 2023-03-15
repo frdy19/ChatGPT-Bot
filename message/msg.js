@@ -93,28 +93,28 @@ selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...
 
 _Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal_
 
-Fitur Tambahan :
-- ${prefix}start *(untuk memulai chat)*
-- ${prefix}ping *(kecepatan respon)*
-- ${prefix}runtime *(waktu berjalan)*
-- ${prefix}play *(mencari video or audio di yt)*
-- ${prefix}play2 *(mencari video or audio di yt)*
-- ${prefix}ytmp3 *(download audio dari link yt)*
-- ${prefix}ytmp4 *(download video yt ke galeri)*
-- ${prefix}chatgpt *(ChatGpt)*
-- ${prefix}dall-e *(menciptakan gambar dari sebuah kata)*
-- ${prefix}sticker *(membuat sticker)*
-- ${prefix}mediafiredl *(download link mediafire)*
+*FITUR TAMBAHAN:*
+- +${prefix}start*       : _untuk memulai chat_
+- +${prefix}ping*        : _kecepatan respon_
+- *${prefix}runtime*     : _waktu berjalan_
+- +${prefix}play*        : _mencari video or audio di yt_
+- *${prefix}play2*       : _mencari video or audio di yt_
+- *${prefix}ytmp3*       : _download audio dari link yt_
+- *${prefix}ytmp4*       : _download video yt ke galeri_
+- *${prefix}chatgpt*     : ChatGpt_
+- *${prefix}dall-e*      : _menciptakan gambar dari sebuah kata_
+- *${prefix}sticker*     : _membuat sticker_
+- *${prefix}mediafiredl* : _download link mediafire_
 
-Fitur Khusus Owner:
-- ${prefix}update
-- ${prefix}desactivarwa
+*FITUR KHUSUS OWNER:*
+- *${prefix}update*
+- *${prefix}desactivarwa*
 
 *Dev By @Ryan Aditya S.Si* X *ZeEx*`
 var templateButtons = [
-{index: 1, urlButton: {displayText: 'DEVELOPER 👑', url: 'https://wa.me/62822522851432'}},
-{index: 2, urlButton: {displayText: 'GITHUB 🌱', url: 'https://github.com/RyannAditya'}},
-{index: 3, urlButton: {displayText: 'GRUP OFC 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
+{index: 1, urlButton: {displayText: 'Developer 👑', url: 'https://wa.me/62822522851432'}},
+{index: 2, urlButton: {displayText: 'Github 🌱', url: 'https://github.com/RyannAditya'}},
+{index: 3, urlButton: {displayText: 'Grup Official 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
 let templateMessage = { image: {url: 'https://www.mizanurrmizan.info/wp-content/uploads/2023/02/chatgpt.jpg'}, caption: textReply, footer: null, templateButtons: templateButtons, viewOnce: true };
 conn.sendMessage(from, templateMessage, { quoted: msg });
 break
