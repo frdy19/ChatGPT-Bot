@@ -94,23 +94,23 @@ selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...
 _Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal_
 
 Fitur Tambahan :
-- ${prefix}start
-- ${prefix}ping
-- ${prefix}runtime
-- ${prefix}play
-- ${prefix}play2
-- ${prefix}ytmp3
-- ${prefix}ytmp4
-- ${prefix}chatgpt
-- ${prefix}dall-e
-- ${prefix}sticker
-- ${prefix}mediafiredl
+- ${prefix}start *(untuk memulai chat)*
+- ${prefix}ping *(kecepatan respon)*
+- ${prefix}runtime *(waktu berjalan)*
+- ${prefix}play *(mencari video or audio di yt)*
+- ${prefix}play2 *(mencari video or audio di yt)*
+- ${prefix}ytmp3 *(download audio dari link yt)*
+- ${prefix}ytmp4 *(download video yt ke galeri)*
+- ${prefix}chatgpt *(ChatGpt)*
+- ${prefix}dall-e *(menciptakan gambar dari sebuah kata)*
+- ${prefix}sticker *(membuat sticker)*
+- ${prefix}mediafiredl *(download link mediafire)*
 
 Fitur Khusus Owner:
 - ${prefix}update
 - ${prefix}desactivarwa
 
-*Dev By @Ryan Aditya S.Si*`
+*Dev By @Ryan Aditya S.Si* X *ZeEx*`
 var templateButtons = [
 {index: 1, urlButton: {displayText: 'DEVELOPER 👑', url: 'https://wa.me/62822522851432'}},
 {index: 2, urlButton: {displayText: 'GITHUB 🌱', url: 'https://github.com/RyannAditya'}},
@@ -164,11 +164,11 @@ try {
 const responsee = await openai.createImage({ prompt: textosinespacio, n: 1, size: "512x512", });    
 sendImgUrl(responsee.data.data[0].url)        
 } catch (jj) {
-reply("*[❗] Error en el servidor 1, se intentará con otro servidor...*\n\n*—◉ Error:*\n" + jj)       
+reply("*[❗] Server Error Code 1, mencari server...*\n\n*—◉ Error:*\n" + jj)       
 try {      
 sendImgUrl(`https://api.lolhuman.xyz/api/dall-e?apikey=BrunoSobrino&text=${textosinespacio}`)  
 } catch (jj2) {
-reply("*[❗] Error en el servidor 2, no se obtuvo ninguna imagen de la IA...*\n\n*—◉ Error:*\n" + jj2)        
+reply("*[❗] Error Code 2, tidak ada gambar  yang diperoleh AI...*\n\n*—◉ Error:*\n" + jj2)        
 }}
 break
 case 'chatgpt': case 'ai': 
@@ -183,7 +183,7 @@ let tioress = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobri
 let hasill = await tioress.json()
 reply(`${hasill.result}`.trim())   
 } catch (qqe) {        
-reply("*[❗] Error en el servidor 2, no se obtuvieron respuestas de la IA...*\n\n*—◉ Error:*\n" + qqe)  
+reply("*[❗] Kesalahan server 2, tidak ada tanggapan dari AI..*\n\n*—◉ Error:*\n" + qqe)  
 }} 
 break
 case 'update':
@@ -196,8 +196,8 @@ let updatee = execSync('git remote set-url origin https://github.com/BrunoSobrin
 await reply(updatee.toString())}  
 break
 case 'desactivarwa':      
-if (!isOwner) return reply('*[❗] Este comando solo puede ser utilizado por el Owner del Bot*')    
-if (!q || !args[1]) return reply(`*[❗] Ingrese un numero, ejemplo ${prefix + command} +1 (450) 999-999*`)
+if (!isOwner) return reply('*[❗] Perintah ini hanya dapat digunakan oleh Pemilik Bot*')    
+if (!q || !args[1]) return reply(`*[❗] Masukkan nomor, contoh ${prefix + command} +1 (450) 999-999*`)
 let ntah = await axios.get("https://www.whatsapp.com/contact/noclient/")
 let email = await axios.get("https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=10")
 let cookie = ntah.headers["set-cookie"].join("; ")
@@ -290,7 +290,7 @@ console.log('Finish')
 await conn.sendMessage(from, {sticker: {url:'stk.webp'}})
 }).addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`]).toFormat('webp').save('stk.webp');
 }}} catch {     
-reply(`*[❗] Responda a una imagen, gif o video, el cual será convertido en sticker, recuerde que debe mandar una imagen o responder a una imagen con el comando ${prefix + command}*`)        
+reply(`*[❗] Balas gambar, gif atau video, yang akan diubah menjadi stiker, ingat bahwa Anda harus mengirim gambar atau membalas gambar dengan perintah ${prefix + command}*`)        
 }
 break 
 default:
@@ -305,13 +305,13 @@ try {
 const response = await openai.createCompletion({ model: "text-davinci-003", prompt: chatstext, temperature: 0.3, max_tokens: MAX_TOKEN, stop: ["Ai:", "Human:"], top_p: 1, frequency_penalty: 0.2, presence_penalty: 0, })
 reply(response.data.choices[0].text.trim())
 } catch (eee) {
-//reply("*[❗] Error en el servidor 1, se intentará con otro servidor...*\n\n*—◉ Error:*\n" + eee)       
+//reply("*[❗] Kesalahan server 2, tidak ada tanggapan dari AI...*\n\n*—◉ Error:*\n" + eee)       
 try {    
 let tiores = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino&text=${chatstext}&user=user-unique-id`)
 let hasil = await tiores.json()
 reply(`${hasil.result}`.trim())   
 } catch (eeee) {        
-reply("*[❗] Error en el servidor 2, no se obtuvieron respuestas de la IA...*\n\n*—◉ Error:*\n" + eeee)  
+reply("*[❗]  Kesalahan server 2, tidak ada tanggapan dari AI...*\n\n*—◉ Error:*\n" + eeee)  
 }} 
 break
 }} catch (err) {
