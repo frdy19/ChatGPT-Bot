@@ -28,7 +28,7 @@ function title() {
 		width: 80,
 		whitespaceBreak: false
 	})))
-	console.log(chalk.yellow(`\n              ${chalk.yellow('[ Editado By BrunoSobrino ]')}\n\n${chalk.red('Bot OpenAI')} : ${chalk.white('WhatsApp Bot OpenAI')}\n${chalk.red('Contactame por WhatsApp')} : ${chalk.white('+52 1 999 612 5657')}\n`))
+	console.log(chalk.yellow(`\n              ${chalk.yellow('[ Recode By Ryann X Ferdy ]')}\n\n${chalk.red('Bot OpenAI')} : ${chalk.white('WhatsApp Bot OpenAI Project By Ryan X Ferdy')}\n${chalk.red('Hubungi Kami Di WhatsApp')} : ${chalk.white('+62 822 5228 5143')}\n`))
 }
 
 /**
@@ -140,11 +140,11 @@ const usertag = `@${num.split("@")[0]}`
 const namegc = metadata.subject
 let qfake = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${num.split('@')[0]}:${num.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 if (anu.action == 'add') {
-let captionwel = '*╔══════════════*\n*╟❧ @subject*\n*╠══════════════*\n*╟❧ @user*\n*╟❧ BIENVENIDO(A)* \n*║*\n*╟❧ DESCRIPCIÓN DEL GRUPO:*\n\n@desc\n\n*║*\n*╟❧ DISFRUTA TU ESTADÍA!!*\n*╚══════════════*'
+let captionwel = 'Selamat Datang @user 👋 di Grup @subject\nJangan Lupa Baca Deskripsi\n\n\n@desc'
 let captionwel2 = captionwel.replace('@user', usertag).replace('@subject', namegc).replace('@desc', descgc)
 conn.sendMessage(anu.id, { image: PPWlcm, caption: captionwel2, mentions: [num]}, { quoted: qfake })                  
 } else if (anu.action == 'remove') {
-let captionbye = '*╔══════════════*\n*╟❧ @user*\n*╟❧ HASTA PRONTO 👋🏻* \n*╚══════════════*' 
+let captionbye = '*Selamat Tinggal @user\n\n\nKalo balik jangan lupa bawa Seblak😝*' 
 let captionbye2 = captionbye.replace('@user', usertag)
 conn.sendMessage(anu.id, { image: PPLft, caption: captionbye2, mentions: [num]}, { quoted: qfake })                    
 }}} catch (e) {
