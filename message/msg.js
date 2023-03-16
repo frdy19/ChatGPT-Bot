@@ -86,14 +86,23 @@ conn.sendPresenceUpdate("available", from);
 switch (command) {
 case 'start': case 'menu':
 var textReply = `Hai,
+Saya adalah bot AI _(ChatGPT)_ yang dapat membantu Anda menjawab beberapa pertanyaan.
 
-*Saya adalah bot AI _(ChatGPT)_ yang dapat membantu Anda menjawab beberapa pertanyaan.*
+*AI* adalah Kecerdasan Buatan yang ditambahkan kepada suatu sistem yang bisa diatur dalam konteks ilmiah atau bisa disebut juga intelegensi artifisial atau hanya disingkat AI, didefinisikan sebagai kecerdasan entitas ilmiah.
 
-*selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...*
+Selain itu kami juga menyediakan beberapa fitur tambahan seperti di bawah ini...
 
-_Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal_
+*Rules Bot :* 
+1. Jangan Spam Bot karena bot hanya dapat menjawab satu per satu pertanyaan
+2. Jika ada fitur yang tidak bekerja silahkan lapor owner agar di perbaiki
+3. Bot masih dalam tahap pengembangan
+4. User bisa request fitur baru untuk bot
 
-*𝙁𝙞𝙩𝙪𝙧 𝙏𝙖𝙢𝙗𝙖𝙝𝙖𝙣:*
+*Harap untuk mematuhi rules bot untuk kenyamanan all user bot*
+
+*Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal*
+
+*Fitur Tambahan:*
 〆 *${prefix}start*       : _untuk memulai chat_
 〆 *${prefix}ping*        : _kecepatan respon_
 〆 *${prefix}runtime*     : _waktu berjalan_
@@ -101,20 +110,19 @@ _Bot Merespon dalam Limit ${MAX_TOKEN} Command Maximal_
 〆 *${prefix}play2*       : _mencari video or audio di yt_
 〆 *${prefix}ytmp3*       : _download audio dari link yt_
 〆 *${prefix}ytmp4*       : _download video yt ke galeri_
-〆 *${prefix}chatgpt*     : ChatGpt_
+〆 *${prefix}chatgpt*     : _ChatGpt seperti AI_
 〆 *${prefix}dall-e*      : _menciptakan gambar dari sebuah kata_
-〆 *${prefix}sticker*     : _membuat sticker_
 〆 *${prefix}mediafiredl* : _download link mediafire_
 
-*𝙁𝙞𝙩𝙪𝙧 𝙆𝙝𝙪𝙨𝙪𝙨 𝙊𝙬𝙣𝙚𝙧:*
+*Fitur khusus Developer:*
 〆 *${prefix}update*
 〆 *${prefix}desactivarwa*
 
-𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 @𝙍𝙮𝙖𝙣 𝘼𝙙𝙞𝙩𝙮𝙖 𝙭 @𝙕𝙚𝙀𝙭 𝙈𝙤𝙙𝙨`
+Developer @Ryan Aditya 𝙭 @ZeEx Ferdy`
 var templateButtons = [
-{index: 1, urlButton: {displayText: '𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 👑', url: 'https://wa.me/62822522851432'}},
-{index: 2, urlButton: {displayText: '𝙎𝙤𝙪𝙘𝙚𝙧 𝘾𝙤𝙙𝙚 🌱', url: 'https://github.com/RyannAditya'}},
-{index: 3, urlButton: {displayText: '𝙂𝙧𝙪𝙥 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
+{index: 1, urlButton: {displayText: 'Developer 1', url: 'https://wa.me/62822522851432'}},
+{index: 2, urlButton: {displayText: 'Developer 2', url: 'https://wa.me/62823504965328'}},
+{index: 3, urlButton: {displayText: 'Grup Official 🔗', url: 'https://chat.whatsapp.com/I47cTfEwzIC391KPBjbTPq'}}]
 let templateMessage = { image: {url: 'https://www.mizanurrmizan.info/wp-content/uploads/2023/02/chatgpt.jpg'}, caption: textReply, footer: null, templateButtons: templateButtons, viewOnce: true };
 conn.sendMessage(from, templateMessage, { quoted: msg });
 break
@@ -164,7 +172,7 @@ try {
 const responsee = await openai.createImage({ prompt: textosinespacio, n: 1, size: "512x512", });    
 sendImgUrl(responsee.data.data[0].url)        
 } catch (jj) {
-reply("*[❗] Server Error Code 1, mencari server...*\n\n*—◉ Error:*\n" + jj)       
+reply("*[❗] Sedang Mencari Server Terbaik.....*\n\n*—◉ Mohon menunggu....:*\n" + jj)       
 try {      
 sendImgUrl(`https://api.lolhuman.xyz/api/dall-e?apikey=BrunoSobrino&text=${textosinespacio}`)  
 } catch (jj2) {
@@ -177,7 +185,7 @@ try {
 const BotIA = await openai.createCompletion({ model: "text-davinci-003", prompt: textosinespacio, temperature: 0.3, max_tokens: MAX_TOKEN, stop: ["Ai:", "Human:"], top_p: 1, frequency_penalty: 0.2, presence_penalty: 0, })
 reply(BotIA.data.choices[0].text.trim())
 } catch (qe) {
-reply("*[❗] Terjadi Error Dalam Server Last Code 1, Sedang Mencari Server Terbaik...*\n\n*—◉ Error:*\n" + qe)       
+reply("*[❗] Sedang Mencari Server Terbaik......:*\n\n*—◉ Mohon menunggu....::*\n" + qe)       
 try {    
 let tioress = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino&text=${textosinespacio}&user=user-unique-id`)
 let hasill = await tioress.json()
@@ -187,7 +195,7 @@ reply("*[❗] Kesalahan server 2, tidak ada tanggapan dari AI..*\n\n*—◉ Erro
 }} 
 break
 case 'update':
-if (!isOwner) return reply('*[❗] Este comando solo puede ser utilizado por el Owner del Bot*')    
+if (!isOwner) return reply('*[❗] Maaf Fitur ini hanya dapat digunakan oleh developer Bot*')    
 try {    
 let stdout = execSync('git pull' + (m.fromMe && q ? ' ' + q : ''))
 await reply(stdout.toString()) 
