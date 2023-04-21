@@ -1,10 +1,10 @@
 {
   "ownerNumber": [
-  "6282252285143"
+  "62823504965328"
   ],
   "MAX_TOKEN": 4097,
-  "OPENAI_KEY": "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", 
+  "OPENAI_KEY": "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", 
   "NOTA_1": "Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys",
-  "ORG_ID": "TU_ID_DE_ORG",
+  "ORG_ID": "org-U6YgCqUewuSdF4rtKHWALBfK",
   "NOTA_2": "Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings"
 }
