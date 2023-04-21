@@ -84,7 +84,7 @@ conn.sendPresenceUpdate("available", from);
     }
 
 switch (command) {
-case 'start': case 'menu':
+case 'kssgsgsgvzs': case 'shvsbzzjsb':
 var textReply = `Hai,
 Saya adalah bot AI _(ChatGPT)_ yang dapat membantu Anda menjawab beberapa pertanyaan.
 
@@ -129,10 +129,35 @@ break
 case 'runtime':
 reply(require('../lib/myfunc').runtime(process.uptime()))
 break
-case 'ping':
+case 'menu':
 var timestamp = speed();
 var latensi = speed() - timestamp
-reply(`*Tiempo de respuesta: ${latensi.toFixed(4)}s*`)
+reply(`*KECEPATAN RESPON BOT: ${latensi.toFixed(4)}s*
+
+Hola @${senderJid.split`@`[0] || pushname || 'user'} 👋
+
+Spanyol : Soy un Bot de WhatsApp que usa la inteligencia artificial de OpenAI (ChatGPT), fui creado para responder a tus preguntas. Envíame una pregunta y te responderé!. 
+Indonesia : Saya adalah Bot WhatsApp yang menggunakan kecerdasan buatan OpenAI (ChatGPT), saya diciptakan untuk menjawab pertanyaan Anda. Kirimi saya pertanyaan dan saya akan menjawab Anda!.
+
+Spanyol : _El Bot se limita a responder ${MAX_TOKEN} palabras como máximo_
+Indonesia : _Bot dibatasi untuk menjawab paling banyak ${MAX_TOKEN} kata_
+
+Note : 
+❏ Jika Bot tidak merespon perintah,kemungkinan fitur error atau masalah sinyal yang delay
+❏ Bot ini adalah bot AI Atau Bot Kecerdasan Buatan
+
+*Menu Utama*
+❏ .start 
+❏ .ping
+❏ .runtime
+❏ .ai
+❏ .chatgpt
+❏ .dall-e
+❏ .mediafiredl
+
+*Menu Khusus Pemilik Bot*
+❏ .update
+❏ .desactivarwa`)
 break     
 case 'play':
 if (!args[1]) return reply(`*[❗] Nama lagu tidak ada, harap masukkan perintah plus nama, judul, atau tautan lagu atau video YouTube apa pun*\n\n*—◉ Contoh:*\n*◉ ${prefix + command} Good Feeling - Flo Rida*`)        
@@ -191,7 +216,7 @@ let tioress = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobri
 let hasill = await tioress.json()
 reply(`${hasill.result}`.trim())   
 } catch (qqe) {        
-reply("*[❗] Kesalahan server 2, tidak ada tanggapan dari AI..*\n\n*—◉ Error:*\n" + qqe)  
+reply("*[❗] Kesalahan server.*\n\n*—◉ Error:*\n" + qqe)  
 }} 
 break
 case 'update':
